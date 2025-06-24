@@ -164,7 +164,6 @@ class SudokuUI:
         """
         solver = Solver()
         board = self.get_board()
-        print(board)  # optional: debug print
         if not solver.solve_sudoku(board):
             messagebox.showinfo("Sudoku Solver", "No solution found.")
         else:
