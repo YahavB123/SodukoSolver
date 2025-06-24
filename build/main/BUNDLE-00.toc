@@ -1,0 +1,3 @@
+([('main',
+   '/Users/yahav/Desktop/Projects/SodukoSolver/dist/main',
+   'EXECUTABLE')],)
