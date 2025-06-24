@@ -21,6 +21,12 @@ class Solver:
         Returns:
             bool: True if a valid solution was found, False otherwise.
         """
+
+        # First validate that the initial board state is valid
+        if not self.is_board_valid(board):
+            return False
+
+
         cell = self.find_empty(board)
         if cell is None:
             return True  # No empty cells left — puzzle is solved
@@ -34,6 +40,33 @@ class Solver:
                 board[row][col] = ''  # Backtrack
 
         return False  # Trigger backtracking
+
+    def is_board_valid(self, board: list[list[str]]) -> bool:
+        """
+        Validates that the current board state doesn't violate Sudoku rules.
+
+        Args:
+            board (list[list[str]]): Sudoku board.
+
+        Returns:
+            bool: True if the board is valid, False otherwise.
+        """
+        for i in range(9):
+            for j in range(9):
+                if board[i][j] != '':
+                    # Temporarily remove the current cell's value
+                    temp = board[i][j]
+                    board[i][j] = ''
+
+                    # Check if placing this value would be valid
+                    if not self.is_valid(board, i, j, temp):
+                        board[i][j] = temp  # Restore the value
+                        return False
+
+                    # Restore the value
+                    board[i][j] = temp
+        return True
+
 
     def is_valid(self, board: list[list[str]], row: int, col: int, digit: str) -> bool:
         """

@@ -122,7 +122,7 @@ class SudokuUI:
         """
         widget = event.widget
         val = widget.get()
-        if val not in list('123456789'):
+        if val != '' and val not in list('123456789'):
             widget.delete(0, tk.END)
 
     def clear_board(self):
