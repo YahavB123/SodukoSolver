@@ -17,7 +17,7 @@ Easily input a 9x9 Sudoku puzzle and click **Solve** to see the completed board,
 
 ## 📷 Preview
 
-<img src="screenshot.png" alt="Sudoku Solver Screenshot" width="600"/>
+<img src="Screenshot.png" alt="Sudoku Solver Screenshot" width="600"/>
 
 ---
 
@@ -32,6 +32,6 @@ Easily input a 9x9 Sudoku puzzle and click **Solve** to see the completed board,
 
 ```bash
 git clone https://github.com/YahavB123/SudokuSolver.git
-cd sudoku-solver
-python app.py
+cd SudokuSolver
+python main.py
 ```
