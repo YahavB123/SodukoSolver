@@ -25,7 +25,7 @@ Easily input a 9x9 Sudoku puzzle and click **Solve** to see the completed board,
 
 ### Requirements
 
-- Python 3.8+
+- Python 3.12+
 - No external libraries needed (uses built-in `tkinter`)
 
 ### Run the App
