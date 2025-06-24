@@ -31,7 +31,7 @@ Easily input a 9x9 Sudoku puzzle and click **Solve** to see the completed board,
 ### Run the App
 
 ```bash
-git clone https://github.com/your-username/sudoku-solver.git
+git clone https://github.com/YahavB123/SudokuSolver.git
 cd sudoku-solver
 python app.py
 ```
